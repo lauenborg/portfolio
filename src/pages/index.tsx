@@ -96,8 +96,9 @@ export default function Home() {
                 Hey there! <HandWave minInterval={10000} maxInterval={25000} />
               </p>
               <p>
-                My name is Frederik Lauenborg and I'm a Visual Designer based in
-                Copenhagen
+                {
+                  "My name is Frederik Lauenborg and I'm a Visual Designer based in Copenhagen"
+                }
               </p>
             </motion.div>
             <nav className="flex flex-row sticky top-20 gap-2 p-2 w-full justify-evenly border-2 rounded-xl border-black">
