@@ -1,21 +1,16 @@
 import Image from "next/image";
 import { motion, useScroll } from "framer-motion";
-
-import { Inter } from "next/font/google";
 import HandWave from "../utils/handWave";
 
-const inter = Inter({ subsets: ["latin"] });
+let i = { 1: "test", 2: "test2" };
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
 
   return (
     <main className="min-h-screen items-center justify-center px-10 sm:px-20 md:px-10 lg:px-20 xl:px-30">
-      <div className="fixed left-0 top-5 w-full justify-center flex font-semibold tracking-wide">
-        Lauenborg
-      </div>
-      <div className="md:grid flex grid-cols-5 xl:grid-cols-7 flex-col-reverse md:gap-8 gap-10 w-full ">
-        <div className="col-span-3 xl:col-span-5 flex flex-col w-full lg:w-full gap-20">
+      <div className="flex md:grid grid-cols-5 xl:grid-cols-7 flex-col-reverse md:gap-8 gap-10 w-full ">
+        <div className="col-span-3 flex flex-col w-full gap-20 lg:w-full xl:col-span-5">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -30,51 +25,10 @@ export default function Home() {
               }
             </h1>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="flex flex-col justify-center w-full  gap-2"
-          >
-            <h1 className="text-5xl max-w-xl font-semibold">
-              Hey there! <HandWave minInterval={10000} maxInterval={25000} />
-            </h1>
-            <h1 className="text-3xl max-w-xl break-after-column">
-              {
-                "My name is Frederik Lauenborg and I'm a Visual Designer based in Copenhagen"
-              }
-            </h1>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="flex flex-col justify-center w-full  gap-2"
-          >
-            <h1 className="text-5xl max-w-xl font-semibold">
-              Hey there! <HandWave minInterval={10000} maxInterval={25000} />
-            </h1>
-            <h1 className="text-3xl max-w-xl break-after-column">
-              {
-                "My name is Frederik Lauenborg and I'm a Visual Designer based in Copenhagen"
-              }
-            </h1>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="flex flex-col justify-center w-full  gap-2"
-          >
-            <h1 className="text-5xl max-w-xl font-semibold">
-              Hey there! <HandWave minInterval={10000} maxInterval={25000} />
-            </h1>
-            <h1 className="text-3xl max-w-xl break-after-column">
-              {
-                "My name is Frederik Lauenborg and I'm a Visual Designer based in Copenhagen"
-              }
-            </h1>
-          </motion.div>
         </div>
-        <div className="md:sticky md:top-0 flex py-10  col-span-2  md:h-screen items-center justify-center md:justify-end">
+        <div className="flex py-10 col-span-2 items-center justify-center md:h-screen md:sticky md:top-0 md:justify-end">
           <motion.div
+            transition={{ delay: 0.15 }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0, rotate: 1.5 }}
             whileHover={{
